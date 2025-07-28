@@ -10,7 +10,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestParams(t *testing.T) {
+func TestRouterParams(t *testing.T) {
 	router := httprouter.New()
 	router.GET("/user/:name", func(w http.ResponseWriter, r *http.Request, params httprouter.Params) {
 		name := params.ByName("name")
